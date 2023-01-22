@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className="Meta">
-        <h1>ACM Certificates</h1>
+        <h1>DCC Certificate Generator</h1>
         <p>Please enter your name.</p>
         <input
           type="text"
