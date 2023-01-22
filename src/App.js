@@ -18,7 +18,7 @@ function App() {
       <div className="Meta">
         <h1>DCC Certificate Generator</h1>
         <p>Please enter your name.</p>
-        <a href="https://github.com/singhatithi/Certificate-generator" target={blank}>
+        <a href="https://github.com/singhatithi/Certificate-generator" target="_blank">
           <h3>Click Here to open documentation</h3>
         </a>
         <input
