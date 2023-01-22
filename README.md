@@ -35,6 +35,8 @@ Step 3: Run the script given below
             document.getElementById("inputheredude").value = names[i];
             document.getElementById("inputheredude").style.display = "block";
             document.getElementById("inputid").innerHTML = names[i];
+            let fu = document.getElementById("inputheredude")
+            fu.value = names[i];
             document.getElementById("inputheredude").setAttribute("value", "atithi");
             document.getElementById("buttonid").click();
             i++;

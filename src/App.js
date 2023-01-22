@@ -32,7 +32,7 @@ function App() {
           onClick={(e) => {
             e.preventDefault();
             exportComponentAsPNG(certificateWrapper, {
-              fileName: Name,
+              fileName: document.getElementById("inputheredude").value,
               html2CanvasOptions: { backgroundColor: null }
             });
           }}
