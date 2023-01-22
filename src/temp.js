@@ -6,14 +6,15 @@ function delay() {
 
 let i = 0;
 let interval = setInterval(() => {
-      if (i === 100) {
+      if (names[i] == undefined) {
             clearInterval(interval);
             return;
       }
       document.getElementById("inputheredude").value = names[i];
       document.getElementById("inputheredude").style.display = "block";
       document.getElementById("inputid").innerHTML = names[i];
-      document.getElementById("inputheredude").setAttribute("value", "atithi");
+      let fu = document.getElementById("inputheredude")
+      fu.value = names[i];
       document.getElementById("buttonid").click();
       i++;
 }, 1000);
