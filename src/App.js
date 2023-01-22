@@ -4,7 +4,14 @@ import "./App.css";
 
 function App() {
   const certificateWrapper = useRef(null);
-  const [Name, setName] = useState("hgf");
+  const [Name, setName] = useState("Coder_Ravan");
+
+  const [xAxis, setXAxis] = useState(0);
+  const [yAxis, setYAxis] = useState(295);
+
+  const [imageURL, setImageURL] = useState("https://i.ibb.co/stkz5Q1/TITAN-3-0-CERTIFICATE1-copy.jpg")
+
+  const [tempImageURL, setTempImageURL] = useState("https://i.ibb.co/stkz5Q1/TITAN-3-0-CERTIFICATE1-copy.jpg");
 
   return (
     <div className="App">
@@ -32,25 +39,55 @@ function App() {
         >
           Download
         </button>
+        <br />
+        <button id="buttonid" onClick={() => { setYAxis(yAxis - 5); console.log(imageURL) }}>
+          UP
+        </button>
+        <button id="buttonid" onClick={() => { setYAxis(yAxis + 5) }}>
+          Down
+        </button>
+        <button id="buttonid" onClick={() => { setXAxis(xAxis - 5) }}>
+          Left
+        </button>
+        <button id="buttonid" onClick={() => { setXAxis(xAxis + 5) }}>
+          Right
+        </button>
+        <input
+          type="text"
+          id="inputheredude"
+          placeholder="Please enter the certificate image URL here"
+          onChange={(e) => {
+            setTempImageURL(e.target.value);
+          }}
+        />
+        <button id="buttonid" onClick={() => { setImageURL(tempImageURL) }}>
+          Load Image
+        </button>
       </div>
+
 
       <div id="downloadWrapper" ref={certificateWrapper}>
         <div id="certificateWrapper">
           <div className="certificateName">
             <p id="inputid" onChange={(e) => {
               setName(e.target.value);
-            }}>
+            }}
+              style={{
+                left: `${xAxis}px`,
+                top: `${yAxis}px`,
+              }}
+            >
               {Name}
             </p>
           </div>
           <img
             height={520}
-            src="https://i.ibb.co/stkz5Q1/TITAN-3-0-CERTIFICATE1-copy.jpg"
+            src={`${imageURL}`}
             alt="Certificate"
           />
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
