@@ -15,7 +15,7 @@ Step 1: Open the console from browser
 
 Step 2: create an array with the CSV values,
 
-      var arr = ["Atithi","Akshat","Mayur","Satwik"];
+      var names = ["Atithi","Akshat","Mayur","Satwik"];
       Here we just copied the CSV data which we got from the website
 
 Step 3: Run the script given below
