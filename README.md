@@ -28,7 +28,7 @@ Step 3: Run the script given below
 
       let i = 0;
       let interval = setInterval(() => {
-            if (i === 100) {
+            if (i === names.lengt) {
                   clearInterval(interval);
                   return;
             }
